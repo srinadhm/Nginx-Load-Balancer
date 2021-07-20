@@ -1,6 +1,6 @@
-Classic Load Balancer:
+Classic Load Balancer for nginx server:
 
-To apply load balancer both the ec2 instances are in different availability zones 
+To apply load balancer both the ec2 instances are in different availability zones (us-east-1e,us-east-1c)
 Create two ec2 instances and install nginx on both the instances and start the nginx server 
 ###################
 amazon-linux-extras install nginx1 (amazon linux2)
@@ -28,3 +28,7 @@ Before creating load balancer check the nginx home page is loading or not in bro
 Allow port number 80 in security groups
 http://3.237.69.140/ 
 http://54.237.110.240/
+
+After creating classic load balancer attach the above ec2 instances and once the load balancer comes to active (inService) test the laod balancer uri in browser
+#########
+http://nginx-load-balancer-776974340.us-east-1.elb.amazonaws.com/
